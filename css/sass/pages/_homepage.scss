@@ -1,0 +1,162 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/placeholder";
+@use "../components/heading";
+
+/* Start Slider */
+.slider {
+  q {
+    font: {
+      size: 20px;
+      style: italic;
+      weight: bold;
+    }
+    line-height: 1.7;
+    text-align: center;
+    color: #5e5e5e;
+    width: 80%;
+    margin: 30px auto;
+    display: block;
+    @media #{$maxMobile} {
+      width: 100%;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  .bullets {
+    text-align: center;
+    margin-top: 10px;
+    li {
+      display: inline-block;
+      margin: 0 5px;
+      background-color: $grayColor;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 3px solid $grayColor;
+      transition: 0.3s;
+      &.active,
+      &:hover {
+        background-color: white;
+        border-color: #333;
+      }
+      cursor: pointer;
+    }
+  }
+}
+/* End Slider */
+
+// Start Services
+.services-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  > div {
+    width: 100%;
+    text-align: center;
+    @media #{$minMobile} {
+      width: calc((100% / 2) - 20px);
+      text-align: left;
+    }
+    @media #{$minMedium} {
+      width: calc((100% / 3) - 20px);
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+      @media #{$maxSmall} {
+        justify-content: center;
+      }
+      @media #{$minMobile} {
+        justify-content: flex-start;
+      }
+      i {
+        font-size: 24px;
+      }
+      h3 {
+        color: #666;
+      }
+    }
+    p {
+      @extend %p-style;
+    }
+    a {
+      color: $redColor;
+    }
+  }
+}
+// End Services
+
+// Start Players
+.players-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  div {
+    width: 100%;
+    text-align: center;
+    @media #{$minMobile} {
+      width: calc((100% / 2) - 10px);
+      text-align: left;
+    }
+    @media #{$minMedium} {
+      width: calc((100% / 3) - 10px);
+    }
+    @media #{$minLarge} {
+      width: calc((100% / 5) - 10px);
+    }
+    img {
+      max-width: 100%;
+    }
+    h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      justify-content: center;
+      @media #{$minMobile} {
+        justify-content: flex-start;
+      }
+      > span {
+        color: #666;
+      }
+      .span-name {
+        color: #666;
+        font-weight: normal;
+      }
+    }
+    p {
+      @extend %p-style;
+    }
+    a {
+      color: $redColor;
+    }
+  }
+}
+// End Players
+
+// Start Lorem Ipsum
+.lorem-ipsum {
+  .ipsum-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    div {
+      width: 100%;
+      @media #{$minMobile} {
+        width: calc((100% / 2) - 20px);
+      }
+      @media #{$minMedium} {
+        width: calc((100% / 3) - 20px);
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+// End Lorem Ipsum

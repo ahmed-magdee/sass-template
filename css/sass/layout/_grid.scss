@@ -1,0 +1,20 @@
+@use "../helpers/variables" as *;
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: auto;
+  position: relative;
+  @media #{$minMobile} {
+    width: 720px;
+  }
+  @media #{$minMedium} {
+    width: 960px;
+  }
+  @media #{$minLarge} {
+    width: 1140px;
+  }
+  @media #{$minExtraLarge} {
+    width: 1320px;
+  }
+}

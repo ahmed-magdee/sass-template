@@ -1,0 +1,13 @@
+@use "../helpers/variables" as *;
+
+.submit-button {
+  background-color: $redColor;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
