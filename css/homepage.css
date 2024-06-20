@@ -52,7 +52,7 @@ header nav .navbar {
 @media (max-width: 991px) {
   header nav .navbar {
     position: absolute;
-    width: calc(100% - 15px);
+    width: calc(100% - 30px);
     top: 85px;
     z-index: 1;
     left: 15px;
